@@ -1,0 +1,14 @@
+name: Go package
+
+on:
+  push:
+    paths:
+      - 'helloworld.js'
+jobs:
+  build:
+
+    runs-on: self-hosted
+    steps:
+      - uses: actions/checkout@v1
+      - name: Display the path
+        run: echo $paths
