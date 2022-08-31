@@ -1,13 +1,15 @@
-name: Test PowerShell on Ubuntu
-on: push
-jobs:
-  install-dependencies:
-    name: Install dependencies
-    runs-on: self-hosted
-    steps:
-      - uses: actions/checkout@v1
-      - name: Install from PSGallery
-        shell: pwsh
-        run: |
-          Set-PSRepository PSGallery -InstallationPolicy Trusted
-          Install-Module SqlServer, PSScriptAnalyzer
+name: Setup Node.js environment
+uses: actions/setup-node@v3.4.1
+ with:
+   always-auth: false
+   Examples: 12.x, 10.15.1, >=10.15.0.
+   node-version: # optional
+   node-version-file: # optional
+   Examples: x86, x64. Will use system architecture by default.
+   architecture: # optional
+   check-latest: # optional
+   registry-url: # optional
+   scope: # optional
+   token: # optional, default is ${{ github.token }}
+   cache: # optional
+   cache-dependency-path: # optional
