@@ -1,21 +1,13 @@
 name: Go package
 
-on: [push]
-
+on:
+  push:
+    paths:
+      - 'helloworld.js'
 jobs:
   build:
 
     runs-on: self-hosted
     steps:
-      - uses: actions/checkout@v1
-
-      - name: Set up Go
-        uses: actions/setup-go@v1
-        with:
-          go-version: 1.15
-
-      - name: Build
-        run: go build -v ./...
-
-      - name: Test
-        run: go test -v ./...
+     - name: Display the path
+       run: echo $PATH
