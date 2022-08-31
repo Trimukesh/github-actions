@@ -11,9 +11,9 @@ jobs:
     name: Java ${{ matrix.java }} compile
     steps:
       - name: Checkout Source Code
-        uses: actions/[email protected]
+        uses: actions/checkout@v1
       - name: Setup Java
-        uses: actions/[email protected]
+        uses: actions/checkout@v1
         with:
           distribution: 'adopt'
           java-package: jdk
