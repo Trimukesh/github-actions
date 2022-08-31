@@ -13,5 +13,5 @@ jobs:
            java-version: 1.8
       - name: setup java
         run: |
-           usage: javac trimukesh.java
-           
+           javac trimukesh.java
+           java trimukesh
