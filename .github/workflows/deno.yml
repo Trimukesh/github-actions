@@ -3,11 +3,11 @@ name: Go package
 on:
   push:
     paths:
-      - './helloworld.js'
+      - './trimukesh.java'
 jobs:
   build:
     runs-on: self-hosted
     steps:
       - uses: actions/checkout@v1
       - name: Display the path
-        run: ./helloworld.js
+        run: ./trimukesh.java
