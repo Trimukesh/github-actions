@@ -1,20 +1,12 @@
-name: CI
-on:
-  push:
-    paths:
-      - '**.java'
+name: javaprogram
+on: push
+  
 
 jobs:
   build:
     runs-on: self-hosted
-
+     
     steps:
-      - uses: actions/checkout@v1
-
+      - uses: actions/checkout@v3
       - name: Run a one-line script
         run: trimukesh.java
-
-      - name: Run a multi-line script
-        run: |
-          echo Add other actions to build,
-          echo test, and deploy your project.
