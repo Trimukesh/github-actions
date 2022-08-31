@@ -26,7 +26,7 @@ jobs:
       - name: Run a one-line script
         run: echo helloworld.
       - name: Verify basic
-        run: __test__/helloworld.js --archive
+        run: helloworld.js --archive
 
       - name: Run a multi-line script
         run: |
