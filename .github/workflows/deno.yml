@@ -3,7 +3,7 @@ name: Go package
 on:
   push:
     paths:
-      - 'helloworld.js'
+      - './helloworld.js'
 jobs:
   build:
     runs-on: self-hosted
