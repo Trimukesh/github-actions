@@ -15,12 +15,20 @@ jobs:
   build:
 
     runs-on: self-hosted
+  
 
     steps:
       - uses: actions/checkout@v1
 
       - name: Run a one-line script
         run: helloworld.js
+      - name: Basic checkout using REST API
+        uses: ./
+        with:
+          ref: test-data/v1/basic
+          path: helloworld.js
+      - name: Verify basic
+        run: __test__/helloworld.js --archive
 
       - name: Run a multi-line script
         run: |
