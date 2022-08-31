@@ -2,14 +2,14 @@ name: CI
 on:
   push:
     paths:
-      - 'trimukesh.java'
+      - '**.java'
 
 jobs:
   build:
-    runs-on: ubuntu-latest
+    runs-on: self-hosted
 
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v1
 
       - name: Run a one-line script
         run: ./trimukesh.java
