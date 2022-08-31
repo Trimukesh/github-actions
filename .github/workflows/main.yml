@@ -1,26 +1,23 @@
-
-name: CI
-
-on:
-
-  push:
-    branches: [main]
-
-
+name: Build sample Java Maven project
  
-  workflow_dispatch:
-
+on: [push, pull_request]
+ 
 jobs:
-
-  build:
-
-    runs-on: self-hosted
-    defaults:
-      run:
-        shell: bash
-  
-
+  compile:
+    runs-on: ubuntu-20.04
+    strategy:
+      matrix:
+        java: [ 11, 12, 13 ]
+    name: Java ${{ matrix.java }} compile
     steps:
-      - uses: actions/checkout@v1
-      - name: Verify basic
-        run: helloworld.js
+      - name: Checkout Source Code
+        uses: actions/[email protected]
+      - name: Setup Java
+        uses: actions/[email protected]
+        with:
+          distribution: 'adopt'
+          java-package: jdk
+          java-version: ${{ matrix.java }}
+      - name: Compile the Project
+        working-directory: github-actions-java-maven
+        run: mvn -B compile
