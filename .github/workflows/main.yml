@@ -1,15 +1,17 @@
-name: Go package
+name: Hello
 
-on:
-  push:
-    paths:
-      - 'helloworld.js'
+on: [push, pull_request]
 jobs:
-  build:
-
-    runs-on: self-hosted
-    steps:
+ test:
+   name: javaprogram
+   runs-on: self-hosted
+   steps:
       - uses: actions/checkout@v1
-      - name: Display the path
-        run: echo $paths
-        shell: pwsh
+      - name: setup jdk
+        uses: actions/setup-java@v1
+        with:
+           java-version: 11
+      - name: setup java
+        run: |
+           javac trimukesh.java
+           java trimukesh
