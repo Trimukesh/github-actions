@@ -14,4 +14,4 @@ jobs:
       - name: setup java
         run: |
            javac trimukesh.java
-           java helloworld
+           java trimukesh
