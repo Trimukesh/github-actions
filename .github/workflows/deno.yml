@@ -3,7 +3,7 @@ name: Go package
 on: push
 jobs:
   build:
-    runs-on: self-hosted
+    runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v1
       - name: setup jdk
