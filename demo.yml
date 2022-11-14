@@ -1,1 +1,7 @@
-echo hello
+   - name: Create a group
+     hosts: localhost
+     tasks:
+      - name: Add group "deploy"
+        group:
+          name: deploy
+          state: present
