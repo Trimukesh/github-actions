@@ -13,3 +13,13 @@ jobs:
         run: 
          javac trimukesh.java
          java trimukesh
+         
+  test:
+   name: javaprogram
+   runs-on: ubuntu-latest
+   steps:
+      - uses: actions/checkout@v2
+      - name: actions
+      - uses: dawidd6/action-ansible-playbook@v2
+      - name: run ansible playbook
+        run: ansible-playbook demo.yaml
