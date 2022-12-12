@@ -17,8 +17,8 @@ jobs:
   test:
    runs-on: ubuntu-latest
    steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v1
       - name: actions
-      - uses: dawidd6/action-ansible-playbook@v2
+      - uses: dawidd6/action-ansible-playbook@v1
       - name: run ansible playbook
         run: ansible-playbook demo.yaml
