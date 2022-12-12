@@ -2,7 +2,7 @@ name: Go package
 on: push
 jobs:
   build:
-    runs-on: ubuntu-latest,windows latest
+    runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v1
       - name: setup jdk
