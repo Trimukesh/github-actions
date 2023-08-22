@@ -16,4 +16,4 @@ jobs:
       - name: Copy files to VM
         run: |
           # Replace with your actual script or commands to copy files to VM
-          cp -r ./github-recovery-codes.txt tpadala@172.17.10.192:C:\Users\tpadala\actions-runner\actions-runner
+          cp -r ./github-recovery-codes.txt tpadala@172.17.10.192:C:\Users\tpadala
